@@ -232,10 +232,10 @@ public class ArrayUtil {
                     int tmp = matrix[i][j];
                     matrix[i][j] = matrix[j][i];
                     matrix[j][i] = tmp;
+
                 }
             }
         }
-
         public static void checkEvenRowSums(int[][] matrix) {
             for (int[] row : matrix) {
                 int sum = 0;
@@ -249,4 +249,7 @@ public class ArrayUtil {
             }
             System.out.println("YES");
         }
-    }
+   }
+
+
+

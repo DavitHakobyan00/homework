@@ -1,0 +1,169 @@
+1․ Which Java operators can be used with boolean?
+
+A, D
+A. = – համեմատում է boolean արժեքներ
+B. + – չի աշխատում boolean-ի հետ
+C. -- – չի կիրառվում boolean-ի վրա
+D. ! – հակառակ (true ➝ false)
+E. % – միայն թվերի համար
+F. <= – չի կիրառվում boolean-ի վրա
+
+
+2․ What data type will allow _____ z = x + y; to compile?
+Ճիշտ պատասխան: A, B, D
+
+Java-ում x + y երբ byte + byte ➝ promotion է կատարվում ➝ դառնում է int
+
+A. int
+B. long
+C. boolean
+D. double
+E. short (պետք է cast լինի)
+F. byte (պետք է cast լինի)
+
+
+3․ Output of CompareValues
+Ճիշտ պատասխան: F
+
+java
+Copy
+Edit
+String message = x > 10 ? "Greater than" : false;
+Սխալ՝ 'false' այստեղ ոչ թե String, այլ boolean է, իսկ տեռնարը պետք է վերադարձնի նույն տիպը երկու ճյուղերում։
+
+
+4․ What change will allow the code to compile?
+Ճիշտ պատասխան: B, D, F
+
+java
+Copy
+Edit
+int y = 2 * x; // x is long → արդյունքն էլ long է
+ B. Cast x → int y = 2 * (int)x;
+ D. Cast ամբողջը → int y = (int)(2 * x);
+ F. Կատարել long y = 2 * x;
+
+
+5․ Output of the for-each with break
+Ճիշտ պատասխան: C
+
+java
+Copy
+Edit
+for (int x : list) {
+  System.out.print(x + ", ");
+  break;
+}
+Միայն առաջին տարրն է տպվում՝ "10, "։
+
+
+6․ Output of arithmetic + if-else
+Ճիշտ պատասխան: F
+
+Երկրորդ else-ը չունի համապատասխան if – սինտաքսային սխալ։
+
+
+7․ Nested ternary
+Ճիշտ պատասխան: D
+
+java
+Copy
+Edit
+x > 2 → true
+x < 4 → false → return 8
+
+
+8․ Bitwise XOR with booleans
+Ճիշտ պատասխան: B
+
+java
+Copy
+Edit
+x = (y != 10) ^ (z = false)
+→ x = true ^ false → true
+
+
+9․ Loop with i = i++
+Ճիշտ պատասխան: F (infinite loop)
+
+java
+Copy
+Edit
+i = i++ → չի փոփոխում i-ի արժեքը
+
+
+10․ byte sum casting
+Ճիշտ պատասխան: D
+
+java
+Copy
+Edit
+(byte) a + b → վեր է բերվում `int`-ի, իսկ հետո cast չկա՝ sum-ը int է
+
+
+11․ Output of 5 * 4 % 3
+Ճիշտ պատասխան: A (20 % 3 = 2)
+
+
+12․ Comparing int with null
+Ճիշտ պատասխան: D
+
+Cannot compare int with String/null – տարբեր տիպեր
+
+
+13․ if(b = true)
+Ճիշտ պատասխան: A
+
+b = true → վերագրում է true, ոչ թե համեմատում
+
+
+14․ result += ++c;
+Ճիշտ պատասխան: C
+
+c = 7 → ++c = 8 → result = 4 + 8 = 12
+
+
+15․ while x < 10
+Ճիշտ պատասխան: E
+
+while-ի մեջ բացակայում են փակագծերը՝ սխալ սինտաքս
+
+16․ do-while with y scoped inside
+Ճիշտ պատասխան: D
+
+y սահմանված է do-ի մեջ՝ while-ում անհայտ է
+
+
+17․ do-while loop until i == 8
+Ճիշտ պատասխան: B
+
+i = 10 → i– → 9 → result -=2 → 13
+i = 8 → loop ends
+Երկու անգամ –2 → result = 15 - 2 - 2 = 11
+
+ԲԱՑԱՌԻԿՈՒԹՅՈՒՆ։ Ուշադրություն՝ keepGoing դառնում է false երբ i==8, բայց դրանից հետո էլ մեկ ցիկլ կատարվում է։
+Եզրափակիչ արժեքը = 11 - 2 = 9
+
+
+18․ nested loop with label
+Ճիշտ պատասխան: A
+
+Տպում է միայն այն դեպքերում, երբ row * col % 2 ≠ 0։ Միայն row=1,col=1 → count=1
+
+
+19․ Loop until m <= n
+Ճիշտ պատասխան: C
+
+Մանրամասն հաշվելով x += m + n մինչև m ≤ n ➝ ստացվում է 23
+
+
+20․ switch with final char constants
+Ճիշտ պատասխան: B
+
+grade = 'B' ➝ գործարկում է case 'B' և fall-through անում է case 'C'
+
+java
+Copy
+Edit
+System.out.print("great"); System.out.print("good");
+→ greatgood
