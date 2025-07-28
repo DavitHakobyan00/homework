@@ -146,7 +146,7 @@ i = 8 → loop ends
 
 
 18․ nested loop with label
-Ճիշտ պատասխան: A
+Ճիշտ պատասխան: B
 
 Տպում է միայն այն դեպքերում, երբ row * col % 2 ≠ 0։ Միայն row=1,col=1 → count=1
 
