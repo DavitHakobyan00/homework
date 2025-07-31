@@ -1,0 +1,160 @@
+1. A
+double num1, int num2 = 0; չի աշխատում, տարբեր տիպեր չեն կարող նույն հայտարարության մեջ լինել առանց կրկին int գրելու։
+Պետք է լինի՝ double num1; int num2 = 0;
+
+2. D
+java
+Copy
+Edit
+chair = chair + table;
+Chair-ը չինիցիալիզացված է, ուստի սա կոմպիլյացիայի սխալ է։
+
+3. B
+String instance variable-ները default արժեքով ստանում են null, եթե չինիցիալիզացվել են:
+
+4. B
+Անվան սկզբում թիվ չի կարող լինել. 2blue
+
+5. B
+Class անունները պետք է սկսվեն մեծատառով՝ FooBar
+
+6. D
+Միակ սխալը առաջին մեթոդում է՝ int.toString() սխալ է, քանի որ int-ը primitive է։
+
+7. C
+Տվյալը _9_99 անօրինական է, որովհետև չի կարելի թվից առաջ _ դնել։
+
+8. C
+Integer-ը wrapper class է int-ի համար։
+
+9. C
+Սխալ է, որովհետև integer բառը պետք է լինի Integer (քեյս սենսիտիվ է)
+
+10. C
+new-ը ստեղծում է նոր object:
+
+11. D
+float f2 = 5.0; սխալ է, քանի որ 5.0-ը double է։
+
+12. A
+byte < char < float < double
+
+13. D
+Java-ում դասի ներսում անդամների կարգը կարևոր չէ՝ բոլոր տարբերակները ընդունելի են։
+
+14. B
+int hot, double cold;  նույն հայտարարության մեջ տարբեր տիպեր չեն թույլատրվում։
+
+15. C
+2 instance initializer կա՝ {} տիպի բլոկներ։
+
+16. C
+int, short, double կարող են ունենալ default արժեք 0։ float ոչ։
+
+17. B
+finalize()-ը կարող է կանչվել 0 կամ ավելի անգամ։ Չի երաշխավորվում կանչը։
+
+18. D
+String wrapper class չէ։ String → class, բայց ոչ primitive wrapper։
+
+19. C
+Քանի որ link1 ու link3 null են, բայց link2 → link3 → link2, նրանք միմյանց են մատնանշում։
+→ Ճիշտ պատկերը C է։
+
+20. C
+3.14-ը double literal է։
+
+21. B
+Integer int = 0; սխալ է, որովհետև int-ը Java-ի բանալի բառ է։
+
+22. B
+bar cannot be local variable if accessed via foo.bar.
+
+23. C
+Class անունը չի կարող թվով սկսվել: class 5MainSt {}
+
+24. D
+1_000_000_.00 սխալ է, չի կարելի _-ը դնել վերջում։
+
+25. C
+Local variable-ները չունեն default արժեք։ Պետք է ինիցիալիզացնել։
+
+26. D
+Բոլորը՝ double, int, long, short կարող են ունենալ default 0։
+
+27. B
+Primitive → Wrapper հնարավոր է ուղղակի վերագրելով (autoboxing):
+
+28. C
+int i = new Integer(4); i.byteValue(); սխալ է, որովհետև int-ը primitive է, byteValue() չկա։
+
+29. D
+new TennisBall(); ճիշտ է՝ օբյեկտ ստեղծելու համար։
+
+30. A
+Միայն I տարբերակում երկու փոփոխականները հայտարարում և նույն արժեքն են ստանում։
+
+31. A
+byte → Byte
+char → Character (ոչ Char)
+
+32. A
+Instance variable-ները կարող են ընդունել null:
+
+33. A
+Primitive-ները սկսվում են փոքրատառով։
+
+34. B
+System.gc() խնդրում է garbage collection, բայց չի երաշխավորում։
+
+35. A
+Բոլոր 3 փոփոխականները մատնանշում են մեկ String object → ոչ մի object չկորչեց։
+
+36. D
+1_000_000.00 վերջում կրկին սխալ է _-ով
+
+37. B
+Instance block-ը առաջինն է կանչվում, բայց constructor-ը վերագրում է արժեքը → "constructor"
+
+38. C
+Միայն int i = null; սխալ է։ Մնացածը` OK:
+
+39. C
+Instance → կարելի է միայն instance method-ից
+Static → կարելի է ցանկացած method-ից
+
+40. B
+2._718 սխալ է. _-ը չի կարող float թվերի մեջ լինել կետից հետո:
+
+41. A
+byte < short < int < long
+
+42. A
+cat.name = "Sadie";
+
+43. B
+Միգուցե finalize()-ը չկանչվի, այսինքն՝ միայն play-play
+
+44. A
+p.beakLength = b; → նորմալ field նշանակման ձև։
+
+45. B
+Integer.parseInt("5") վերադարձնում է int
+Integer.valueOf("5") վերադարձնում է Integer
+
+46. B
+Մնացել է մեկ object (diana), որը չօգտագործվում, ուստի GC-ի համար հասանելի է։
+
+47. C
+Վավեր constructor է public TennisBall() {}
+
+48. A, B, C, D
+Բոլորը հնարավոր են, քանի որ GC-ի կանչը անկանխատեսելի է։
+
+49. B
+Wrapper class constructor-ը կարելի է օգտագործել primitive-ից wrapper ստեղծելու համար։
+օրինակ՝ new Integer(5);
+
+50. A
+Sand() constructor-ն է System.out.print("a"); → միակ աշխատողն է։
+
