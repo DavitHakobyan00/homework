@@ -1,0 +1,91 @@
+1․ Ճիշտ → B, E
+Բոլոր interface-ի մեթոդները ըստ լռելյայն են public abstract (եթե չգրես էլ)։
+
+2․ Ճիշտ → F
+Platypus–ի constructor–ը անուղղակիորեն կանչում է super() → բայց Mammal-ում չկա default constructor, միայն Mammal(int age)։ Ուրեմն compile error line 11-ում։
+
+3․ Ճիշտ → A, B, C, D, E
+frog փոփոխականը պետք է լինի Frog frog = new ...։ Քանի որ TurtleFrog և BrazilianHornedFrog–ը Frog են, նաև CanHop և Object cast–ով տեղավորվում են։ Long չի տեղավորվի։
+
+4․ Ճիշտ → E
+Parent–ում static է, child–ում instance method → static/instance համադրումը չի թույլատրվում։
+
+5․ Ճիշտ → D, E, F
+
+Static methods → override չի լինում, միայն hide։
+
+Variables (public/private) → inheritance–ով չի լինում override, միայն hide։
+
+6․ Ճիշտ → C
+Beetle compile չի անի, որովհետև չի իրականացրել interface–ի getNumberOfSections() մեթոդը։
+
+7․ Ճիշտ → B, C
+
+Կարելի է փոխանցել ցանկացած subclass որպես parameter։
+
+Object parameter-ը ընդունում է բոլոր reference-ները։
+
+A (implicit cast) սխալ է։ D (բոլոր cast errors compile-time) սխալ է։ E սխալ է (runtime-ում աշխատում է override-ված տարբերակը)։
+
+8․ Ճիշտ → F
+Line 2 OK է։
+Line 3 սխալ է → interface–ում abstract method–ի համար պետք է body չլինի։
+Line 4 սխալ է → interface–ում instance method body–ով չի կարելի (մինչև Java 8 միայն default/ static methods)։
+
+9․ Ճիշտ → F
+Falcon abstract class–ը implement է անում interfaces, բայց չի իրականացրել fly() և getWindSpan() մեթոդները։ Ուրեմն compile error։
+
+10․ Ճիշտ → B, E, F
+
+Երկուսն էլ static և final փոփոխականներ ունեն։
+
+Երկուսն էլ կարող են ունենալ static methods։
+
+Երկուսն էլ instantiate անել չի կարելի։
+A սխալ է (interface–ում բոլոր մեթոդները abstract չեն, կարող են default/static լինել)։
+C սխալ է (interfaces extend, classes extend, բայց ոչ երկուսն էլ նույն ձևով)։
+D սխալ է (abstract class–ում default method չկա, միայն interface–ում)։
+G սխալ է (interface Object–ից չի ժառանգվում)։
+
+11․ Ճիշտ → A, D, E
+Բոլոր interface variables → public static final։
+
+12․ Ճիշտ → B
+Override է տեղի ունենում Owl–ում → վերադարձնում է false։
+
+13․ Ճիշտ → A
+spider.printName(4) → int → կանչում է Spider–ի տարբերակը։
+spider.printName(9.0) → double → կանչում է Arthropod–ի տարբերակը։
+Արդյունք → SpiderArthropod։
+
+14․ Ճիշտ → B, C
+
+HasVocalCords–ը ունի abstract method, ուրեմն implementing class–ը պարտադիր override կանի։
+
+CanBark extend է անում HasVocalCords → ինքը պահանջում է երկուսն էլ (makeSound, bark)։
+
+15․ Ճիշտ → B, C
+Concrete class–ը պարտավոր է իրականացնել բոլոր abstract մեթոդները (abstract class–ից և interface–ից)։
+
+16․ Ճիշտ → E
+Reptile.layEggs() declared է որպես final, չի override–վում։ Line 9 փորձ է override անելու → compile error։
+
+17․ Ճիշտ → B
+Line 2–ում սխալ է → abstract method–ը չի կարող body ունենալ։
+
+18․ Ճիշտ → E
+Line 6–ում public String getNumberOfGills(int input) չի կարող override անել default–ին, որովհետև signature–ը նույնն է (տարբեր return type չի թույլատրվում եթե չի covariant)։ Compile error։
+
+19․ Ճիշտ → A, C, F
+setSnake(Snake snake) ընդունում է միայն Snake կամ նրա subclasses։
+
+Cobra → OK
+
+Snake → OK
+
+null → OK
+
+GardenSnake/Object/String → չեն համապատասխանում։
+
+20․ Ճիշտ → D
+fly() Bird–ում private է, ուստի չի override–վում։ Pelican–ի protected fly() ուրիշ method է։ Line 5–ում bird.fly() չի compile անի, քանի որ Bird–ում fly() private է և subclass–ից չի երևում։
